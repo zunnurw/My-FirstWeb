@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <style>
+	.toggleParagraph {
+		cursor: pointer;
+        display: flex;
+		align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+		background-color: #A3E4D7;
+		border: 2px solid #CCD1D1;
+		border-radius: 5px;
+		padding: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+		}
+
+	.myDropdown {
+        display: none;
+        margin-top: 10px;
+		margin-left:20px;
+		margin-right: 20px;
+        }
+
+	.icon {
+        font-weight: bold;
+        font-size: 20px;
+        }
+		
+	body{
+		font-family: Arial, sans-serif;
+	}
+  
+    #index .ui-header{
+		background-color: black;
+		color: white;
+    }
+	
+	#aboutUs .ui-header{
+		background-color: black;
+		color: white;
+    }
+	
+	#portfolio .ui-header{
+		background-color: black;
+		color: white;
+    }
+
+	#contactUs .ui-header{
+		background-color: black;
+		color: white;
+    }
+
+	.ui-content .ui-btn[href="#aboutUs"],
+	.ui-content .ui-btn[href="#portfolio"],
+	.ui-content .ui-btn[href="#contactUs"] {
+		background-color: #138D75;
+		color: #fff;
+		margin: 0;
+		border-radius: 5px;
+		padding: 21px;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+	
+    .member-box h3 {
+        font-size: 1.4em;
+        margin-top: 0;
+		padding: 1.5px;
+        color: #333;
+		background-color: #EAE7E7;
+    }
+
+	.member-box {
+	  border: 2px solid #ccc;
+	  border-radius: 8px;
+	  padding: 15px;
+	  margin-bottom: 20px;
+	}
+
+	.member-box img {
+		width: 150px;
+		border-radius: 50%;
+		margin-bottom: 15px;
+	}
+
+    .member-box p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+        color: #555;
+    }
+	
+	.dream-career-box {
+		border: 2px solid #F7C3C3db;
+		border-radius: 8px;
+		padding: 15px;
+		margin-top: 20px;
+	}
+
+	.dream-career-box p {
+		line-height: 1.6;
+		color: #333;
+	}
+		
+	table {
+		width: 80%;
+		border-collapse: collapse;
+		margin: 20px auto;
+	}
+
+	th, td {
+		border: 1px solid #ddd;
+		padding: 12px;
+		text-align: left;
+	}
+
+	th {
+		background-color: #f2f2f2;
+	}
+  </style>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="index">
+	<div data-role="header" class="ui-header">
+        <h1>Labtask 5 WebApps</h1>
+    </div>
+
+    <center>
+		<div data-role="main" class="ui-content">
+			<a href="#aboutUs" class="ui-btn ui-btn-inline">About Us</a>
+            <a href="#portfolio" class="ui-btn ui-btn-inline">Portfolio</a>
+            <a href="#contactUs" class="ui-btn ui-btn-inline">Contact Us</a>
+        </div>
+    </center><br>
+
+    <section>
+        <h2 style="margin-left:20px;">TEAM MEMBERS</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</td>
+                    <td>10DDT22F1012</td>
+                </tr>
+                <tr>
+                    <td>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</td>
+                    <td>10DDT22F1024</td>
+                </tr>
+                <tr>
+                    <td>PARVINDREN A/L YOGESWARAN</td>
+                    <td>10DDT22F1018</td>
+                </tr>
+                <tr>
+                    <td>MITHRAN A/L BALAKRISHNAN</td>
+                    <td>10DDT22F1029</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="award">
+            <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown1', 'icon1')">
+               Personal Details <span class="icon" id="icon1">+</span>
+            </h4>
+            <div id="dropdown1" class="myDropdown" style="display: none;">
+             	<div class="ui-grid-a">
+      <div class="member-box">
+        <img src="wafiy.jpg" width="150">
+        <h3>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</h3>
+		<b><p>AGE: 27</p></b>
+		<b><p>BORN: PERAK</p></b>
+		<b><p>RACE: MELAYU</p></b>
+        <b><p>PHONE NUMBER: 010-6728393</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: SINGLE</p></b>
+		<b><p>EMAIL ADDRESS: zunnurwife54@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="najmi.jpg" width="150">
+        <h3>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</h3>
+		<b><p>AGE: 29</p></b>
+		<b><p>BORN: KEDAH</p></b>
+		<b><p>RACE: MELAYU</p></b>
+        <b><p>PHONE NUMBER: 017-25369840</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: MARRIED</p></b>
+		<b><p>EMAIL ADDRESS: najmilife54@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="parvin.jpg" width="150">
+        <h3>PARVINDREN A/L YOGESWARAN</h3>
+		<b><p>AGE: 31</p></b>
+		<b><p>BORN: PULAU PINANG</p></b>
+		<b><p>RACE: INDIA</p></b>
+        <b><p>PHONE NUMBER: 019-6284628</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: MARRIED</p></b>
+		<b><p>EMAIL ADDRESS: parvinwifi@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="mithran.jpg" width="150">
+        <h3>MITHRAN A/L BALAKRISHNAN</h3>
+		<b><p>AGE: 24</p></b>
+		<b><p>BORN: MELAKA</p></b>
+		<b><p>RACE: INDIA</p></b>
+		<b><p>PHONE NUMBER: 018-5369023</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: SINGLE</p></b>
+		<b><p>EMAIL ADDRESS: mithran245@gmail.com</p></b>
+	</div>
+    </div>
+	</div>
+	</div>
+		<div class="award">
+            <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown2', 'icon2')">
+               Dream Career <span class="icon" id="icon2">+</span>
+            </h4>
+            <div id="dropdown2" class="myDropdown" style="display: none;">
+			    <div class="ui-grid-a">
+        <div class="member-box">
+		<br>
+            <h3>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Marketing Strategist:</strong></p>
+                <p>In his dream career, Wafiy aspires to take on the role of Chief Marketing Officer (CMO) 
+				for a globally recognized brand. As the CMO, Wafiy envisions leading a dynamic and diverse 
+				team in crafting and executing groundbreaking marketing strategies that transcend borders. 
+				He aims to be at the forefront of shaping the brand's narrative on a global scale, leveraging
+				his extensive experience to create memorable and impactful campaigns. Wafiy envisions playing
+				a pivotal role in steering the brand's trajectory toward innovation and cultural resonance, ensuring 
+				that it remains at the forefront of the ever-evolving marketing landscape.</p>
+            </div>
+			<br>
+			<h3>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Operations Management:</strong></p>
+                <p>Najmi's dream career unfolds as the Chief Operations Officer (COO) or Vice President of Operations in a
+				multinational corporation. In this capacity, Najmi sees himself orchestrating and optimizing intricate 
+				logistical and supply chain networks on a global scale. His vision involves implementing cutting-edge 
+				technologies and methodologies to enhance operational efficiency while maintaining a keen focus on
+				sustainability and resilience. As a key decision-maker in the C-suite, Najmi aims to navigate the
+				complexities of international business, ensuring seamless operations that contribute to the company's
+				overarching growth and success.</p>
+            </div>
+			<br>
+			<h3>PARVINDREN A/L YOGESWARAN</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Finance & Accounting:</strong></p>
+                <p>Parvindren's dream career unfolds as the Chief Financial Officer (CFO) or Finance Director of a 
+				Fortune 500 company. In this role, he envisions being the financial steward of a major corporation,
+				overseeing strategic financial planning, managing budgets, and ensuring compliance at the highest level.
+				Parvindren aspires to contribute to the company's financial stability and growth by making informed
+				financial decisions and driving initiatives that foster sustainable economic success. His vision includes
+				leading a dynamic finance team and collaborating with other C-suite executives to shape the company's 
+				overall strategy.</p>
+            </div>
+			<br>
+			<h3>MITHRAN A/L BALAKRISHNAN</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Technology & Innovation:</strong></p>
+                <p>Mithran's dream career materializes as the Chief Technology Officer (CTO) in a leading technology company
+				or a pioneering tech-driven industry giant. As the CTO, Mithran envisions spearheading research and 
+				development efforts to drive technological advancements and innovation. His goal is to lead a visionary 
+				team in creating and implementing transformative solutions that redefine industry standards. Mithran 
+				aspires to be at the forefront of technological evolution, guiding the company through the adoption of 
+				emerging technologies and ensuring a sustained competitive edge in the rapidly evolving tech landscape.</p>
+            </div>
+        </div>
+	</div>
+	</div>
+	</div>
+
+        <div data-role="footer">
+            <h1>Copyright © DDT4 S1 2023/2024. All rights reserved</h1>
+        </div>
+    </div> 
+
+<div data-role="page" id="aboutUs">
+<div data-role="header">
+<h1>Labtask 5 WebApps</h1>
+</div>
+
+<center>
+<div data-role="main" class="ui-content">
+<a href="#aboutUs" class="ui-btn ui-btn-inline">About Us</a>
+<a href="#portfolio" class="ui-btn ui-btn-inline">Portfolio</a>
+<a href="#contactUs" class="ui-btn ui-btn-inline">Contact Us</a>
+</center>
+
+		<h2 style="margin-left:20px;">TEAM MEMBERS</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Registration Number</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</td>
+				<td>10DDT22F1012</td>
+			</tr>
+			<tr>
+				<td>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</td>
+				<td>10DDT22F1024</td>
+			</tr>
+			<tr>
+				<td>PARVINDREN A/L YOGESWARAN</td>
+				<td>10DDT22F1018</td>
+			</tr>
+			<tr>
+				<td>MITHRAN A/L BALAKRISHNAN</td>
+				<td>10DDT22F1029</td>
+			</tr>
+		</tbody>
+	</table>
+
+        <div class="award">
+            <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown3', 'icon3')">
+               Personal Details <span class="icon" id="icon3">+</span>
+            </h4>
+            <div id="dropdown3" class="myDropdown" style="display: none;">
+			 	<div class="ui-grid-a">
+      <div class="member-box">
+        <img src="wafiy.jpg" width="150">
+        <h3>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</h3>
+		<b><p>AGE: 27</p></b>
+		<b><p>BORN: PERAK</p></b>
+		<b><p>RACE: MELAYU</p></b>
+        <b><p>PHONE NUMBER: 010-6728393</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: SINGLE</p></b>
+		<b><p>EMAIL ADDRESS: zunnurwife54@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="najmi.jpg" width="150">
+        <h3>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</h3>
+		<b><p>AGE: 29</p></b>
+		<b><p>BORN: KEDAH</p></b>
+		<b><p>RACE: MELAYU</p></b>
+        <b><p>PHONE NUMBER: 017-25369840</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: MARRIED</p></b>
+		<b><p>EMAIL ADDRESS: najmilife54@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="parvin.jpg" width="150">
+        <h3>PARVINDREN A/L YOGESWARAN</h3>
+		<b><p>AGE: 31</p></b>
+		<b><p>BORN: PULAU PINANG</p></b>
+		<b><p>RACE: INDIA</p></b>
+        <b><p>PHONE NUMBER: 019-6284628</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: MARRIED</p></b>
+		<b><p>EMAIL ADDRESS: parvinwifi@gmail.com</p></b>
+      </div>
+
+      <div class="member-box">
+        <img src="mithran.jpg" width="150">
+        <h3>MITHRAN A/L BALAKRISHNAN</h3>
+		<b><p>AGE: 24</p></b>
+		<b><p>BORN: MELAKA</p></b>
+		<b><p>RACE: INDIA</p></b>
+		<b><p>PHONE NUMBER: 018-5369023</p></b>
+		<b><p>GENDER: MALE</p></b>
+		<b><p>MARITAL STATUS: SINGLE</p></b>
+		<b><p>EMAIL ADDRESS: mithran245@gmail.com</p></b>
+      </div>
+      </div>
+      </div>
+      </div>
+	        <div class="award">
+            <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown4', 'icon4')">
+               Dream Career <span class="icon" id="icon4">+</span>
+            </h4>
+            <div id="dropdown4" class="myDropdown" style="display: none;">
+			    <div class="ui-grid-a">
+        <div class="member-box">
+		<br>
+            <h3>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Marketing Strategist:</strong></p>
+                <p>In his dream career, Wafiy aspires to take on the role of Chief Marketing Officer (CMO) 
+				for a globally recognized brand. As the CMO, Wafiy envisions leading a dynamic and diverse 
+				team in crafting and executing groundbreaking marketing strategies that transcend borders. 
+				He aims to be at the forefront of shaping the brand's narrative on a global scale, leveraging
+				his extensive experience to create memorable and impactful campaigns. Wafiy envisions playing
+				a pivotal role in steering the brand's trajectory toward innovation and cultural resonance, ensuring 
+				that it remains at the forefront of the ever-evolving marketing landscape.</p>
+            </div>
+			<br>
+			<h3>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Operations Management:</strong></p>
+                <p>Najmi's dream career unfolds as the Chief Operations Officer (COO) or Vice President of Operations in a
+				multinational corporation. In this capacity, Najmi sees himself orchestrating and optimizing intricate 
+				logistical and supply chain networks on a global scale. His vision involves implementing cutting-edge 
+				technologies and methodologies to enhance operational efficiency while maintaining a keen focus on
+				sustainability and resilience. As a key decision-maker in the C-suite, Najmi aims to navigate the
+				complexities of international business, ensuring seamless operations that contribute to the company's
+				overarching growth and success.</p>
+            </div>
+			<br>
+			<h3>PARVINDREN A/L YOGESWARAN</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Finance & Accounting:</strong></p>
+                <p>Parvindren's dream career unfolds as the Chief Financial Officer (CFO) or Finance Director of a 
+				Fortune 500 company. In this role, he envisions being the financial steward of a major corporation,
+				overseeing strategic financial planning, managing budgets, and ensuring compliance at the highest level.
+				Parvindren aspires to contribute to the company's financial stability and growth by making informed
+				financial decisions and driving initiatives that foster sustainable economic success. His vision includes
+				leading a dynamic finance team and collaborating with other C-suite executives to shape the company's 
+				overall strategy.</p>
+            </div>
+			<br>
+			<h3>MITHRAN A/L BALAKRISHNAN</h3>
+            <div class="dream-career-box">
+                <p><strong>CEO, Technology & Innovation:</strong></p>
+                <p>Mithran's dream career materializes as the Chief Technology Officer (CTO) in a leading technology company
+				or a pioneering tech-driven industry giant. As the CTO, Mithran envisions spearheading research and 
+				development efforts to drive technological advancements and innovation. His goal is to lead a visionary 
+				team in creating and implementing transformative solutions that redefine industry standards. Mithran 
+				aspires to be at the forefront of technological evolution, guiding the company through the adoption of 
+				emerging technologies and ensuring a sustained competitive edge in the rapidly evolving tech landscape.</p>
+            </div>
+    </div>
+    </div>
+	</div>
+	</div>
+</div>
+
+<div data-role="footer">
+<h1>Copyright © DDT4 S1 2023/2024. All rights reserved</h1>
+</div>
+</div>
+
+<div data-role="page" id="portfolio">
+<div data-role="header">
+<h1>Labtask 5 WebApps</h1>
+</div>
+
+<center>
+<div data-role="main" class="ui-content">
+<a href="#aboutUs" class="ui-btn ui-btn-inline">About Us</a>
+<a href="#portfolio" class="ui-btn ui-btn-inline">Portfolio</a>
+<a href="#contactUs" class="ui-btn ui-btn-inline">Contact Us</a>
+</center>
+
+<h2 style="margin-left:20px;">Our Awards</h2>
+
+    <div class="award" style="text-align:left;">
+        <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown5', 'icon5')">
+          Outstanding Coding Project Award <span class="icon" id="icon5">+</span>
+        </h4>
+        <div id="dropdown5" class="myDropdown" style="display: none; margin-left:30px; margin-right:20px;">
+            <p>One team member is the technical genius behind our projects. 
+                Their mastery of various programming languages forms the backbone of our digital creations. 
+                This individual's problem-solving skills are unparalleled, effortlessly maneuvering through complex coding challenges. 
+                Their attention to detail and relentless pursuit of excellence ensure the functionality and efficiency of our website and apps, 
+                making them an indispensable asset to our team.</p>
+        </div>
+    </div>
+
+    <div class="award">
+        <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown6', 'icon6')">
+           Community Impact Award <span class="icon" id="icon6">+</span> 
+        </h4>
+        <div id="dropdown6" class="myDropdown" style="display: none; margin-left:30px; margin-right:20px;">
+            <p>Another member is driven by a deep commitment to using technology for positive community change. Their understanding
+                 of user experience and empathy-driven design results in applications that deeply resonate with our users. 
+                 They actively seek feedback, organize user-testing sessions, and refine our products to meet diverse community needs. 
+                 This person's dedication goes beyond code, embodying our team's ethos of creating meaningful social impact through technology.</p>
+        </div>
+    </div>
+
+    <div class="award">
+        <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown7', 'icon7')">
+           Top Pitch at Entrepreneur Competition <span class="icon" id="icon7">+</span>
+        </h4>
+        <div id="dropdown7" class="myDropdown" style="display: none; margin-left:30px; margin-right:20px;">
+            <p>Another team member stands out for their visionary leadership and persuasive communication skills. 
+                Their ability to craft compelling narratives around our projects and foresee market trends captivates judges and investors.
+                 This individual's storytelling prowess, coupled with a deep passion for our project, 
+                 leaves a lasting impression that sets us apart in entrepreneurial circles. Their dedication to refining our pitch and emphasizing 
+                 unique selling points positions our team as a force to be reckoned with in the competitive entrepreneurial landscape.</p>
+        </div>
+    </div><br><br>
+	
+<h2 style="margin-left:20px;">Our Certificate</h2>
+	
+    <div class="award">
+        <h4 class="toggleParagraph custom-paragraph" onclick="toggleDropdown('dropdown8', 'icon8')">
+           Certificate Viewer <span class="icon" id="icon8">+</span>
+        </h4>
+        <div id="dropdown8" class="myDropdown" style="display: none;">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="wafiy.pdf" target="_blank">Wafiy's certificate</a></li>
+				<li><a href="najmi.pdf" target="_blank">Najmi's certificate</a></li>
+				<li><a href="parvin.pdf" target="_blank">Parvindren's certificate</a></li>
+				<li><a href="mithran.pdf" target="_blank">Mithran's certificate</a></li>
+			</ul>
+        </div>
+    </div>
+
+<div data-role="footer">
+<h1>Copyright © DDT4 S1 2023/2024. All rights reserved</h1>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="contactUs">
+<div data-role="header">
+<h1>Labtask 5 WebApps</h1>
+</div>
+
+<center>
+<div data-role="main" class="ui-content">
+<a href="#aboutUs" class="ui-btn ui-btn-inline">About Us</a>
+<a href="#portfolio" class="ui-btn ui-btn-inline">Portfolio</a>
+<a href="#contactUs" class="ui-btn ui-btn-inline">Contact Us</a>
+</center>
+
+<div data-role="main" class="ui-content">
+    <h2>Contact Us</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="tel:019-340-1438">Call Us</a></li>
+      <li><a href="mailto:zunnurw@gmail.com">Email Us</a></li>
+      <li><a href="https://wa.me/+60193401438" target="_blank">Whatsapp Us</a></li>
+    </ul>
+
+    <h2>Testimonials</h2>
+    <div class="ui-grid-a">
+      <div class="member-box">
+        <img src="wafiy.jpg" width="150">
+        <h3>MUHAMMAD ZUNNUR WAFIY BIN ZAIRUL FUAAD</h3>
+        <p>CEO - Marketing Strategist</p>
+        <p>With over a decade of experience in marketing and branding, Wafiy leads our strategic initiatives, devising innovative marketing campaigns and ensuring brand consistency across all channels.</p>
+        <p>His seasoned expertise is a guiding force, ensuring our brand remains distinctive and impactful in every interaction.</p>
+      </div>
+
+      <div class="member-box">
+        <img src="najmi.jpg" width="150">
+        <h3>MUHAMMAD NURNAJMI BIN KHAIRUL NAZRI</h3>
+        <p>CEO - Operations Management</p>
+        <p>Najmi spearheads our operational efficiency, overseeing logistics, supply chain, and process optimization. His leadership ensures seamless and effective business operations.</p>
+        <p>His leadership is the cornerstone of our operational excellence, enabling us to adapt swiftly and drive sustained growth.</p>
+      </div>
+
+      <div class="member-box">
+        <img src="parvin.jpg" width="150">
+        <h3>PARVINDREN A/L YOGESWARAN</h3>
+        <p>CEO - Finance & Accounting</p>
+        <p>Parvindren brings financial acumen to our team, managing budgets, financial planning, and ensuring compliance. His expertise ensures the financial stability and growth of our organization.</p>
+        <p>His strategic financial acumen is the cornerstone upon which our organization's success and resilience are built.</p>
+      </div>
+
+      <div class="member-box">
+        <img src="mithran.jpg" width="150">
+        <h3>MITHRAN A/L BALAKRISHNAN</h3>
+        <p>CEO - Technology & Innovation</p>
+        <p>Mithran drives our technological advancements, leading our R&D efforts and implementing innovative solutions. His vision shapes our tech-driven approach for future growth.</p>
+        <p>His leadership is pivotal in steering our journey toward embracing emerging technologies and harnessing their transformative power for continued success.</p>
+      </div>
+    </div>
+  </div>
+
+<div data-role="footer">
+<h1>Copyright © DDT4 S1 2023/2024. All rights reserved</h1>
+</div>
+</div>
+
+<script>
+
+        function toggleDropdown(dropdownId, iconId) {
+            var dropdown = document.getElementById(dropdownId);
+            var icon = document.getElementById(iconId);
+
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+                icon.textContent = "-";
+            } else {
+                dropdown.style.display = "none";
+                icon.textContent = "+";
+            }
+        }
+</script>
+</body>
+</html>	
